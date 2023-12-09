@@ -67,7 +67,13 @@ public class Main {
     public static boolean isRoman(String str) {
         return str.matches("[IXVLCDM]");
     }
-
+    /**
+     * Вычисляет результат выражения записанного строкой.
+     *
+     * @param operation строка состоящая из 2х чисер (римских или арабских) и одного операнда (+, -, * или /)
+     * @return строковое представление результата выражения. если числа римские то результат представляет собой римское число
+     * @throws IllegalArgumentException если более трех операндов
+     */
     public static String calculate(String operation) {
 
 
