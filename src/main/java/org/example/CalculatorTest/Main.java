@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static String calc(String input) {
-        String[] parts = input.split("\\s+");
+        // Изменен regex паттерн чтобы разделить операнды и операторы без пробелов
+        String[] parts = input.split("(?=[+\\-*/])|(?<=[+\\-*/])");
+
         if (parts.length != 3) {
             throw new IllegalArgumentException("Некорректное выражение");
         }
